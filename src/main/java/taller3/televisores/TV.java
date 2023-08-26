@@ -74,4 +74,44 @@ public class TV {
     public int getEstado() {
         return estado;
     }
+
+    public void canalUp() {
+        if (permitidoCambiarCanal(canal + 1))
+            canal++;
+    }
+
+    public void canalDown() {
+        if (permitidoCambiarCanal(canal - 1))
+            canal--;
+    }
+
+    public void volumenUp() {
+        if (permitidoCambiarVolumen(volumen + 1))
+            volumen++;
+    }
+
+    public void volumenDown() {
+        if (permitidoCambiarVolumen(volumen - 1))
+            volumen--;
+    }
+
+    private boolean permitidoCambiarCanal(int canal) {
+        if (!estado)
+            return false;
+
+        if (canal >= 1 && canal <= 120)
+            return true;
+
+        return false;
+    }
+
+    private boolean permitidoCambiarVolumen(int volumen) {
+        if (!estado)
+            return false;
+
+        if (volumen >= 0 && volumen <= 7)
+            return true;
+
+        return false;
+    }
 }
