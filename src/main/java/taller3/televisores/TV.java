@@ -71,7 +71,7 @@ public class TV {
         estado = false;
     }
 
-    public int getEstado() {
+    public boolean getEstado() {
         return estado;
     }
 
