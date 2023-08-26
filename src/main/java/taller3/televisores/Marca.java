@@ -11,7 +11,7 @@ public class Marca {
         return nombre;
     }
 
-    public String setNombre(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 }
