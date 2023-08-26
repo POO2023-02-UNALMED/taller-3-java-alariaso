@@ -101,19 +101,13 @@ public class TV {
         if (!estado)
             return false;
 
-        if (canal >= 1 && canal <= 120)
-            return true;
-
-        return false;
+        return canal >= 1 && canal <= 120;
     }
 
     private boolean permitidoCambiarVolumen(int volumen) {
         if (!estado)
             return false;
 
-        if (volumen >= 0 && volumen <= 7)
-            return true;
-
-        return false;
+        return volumen >= 0 && volumen <= 7;
     }
 }
